@@ -1,30 +1,29 @@
-# .NET Backend Interview Prep — 45-Day Schedule (5 hrs/day)
 
-Same 45-day structure, expanded for 5 hrs/day: ~3 hrs on the **Core** topics (from the original plan) + ~2 hrs on **Extra** topics (added depth/breadth that a longer study day makes room for). ★ = high-frequency interview topic.
+# .NET Backend Interview Prep — 45-Day Schedule (5 hrs/day) — v2
 
 ---
 
 ## Week 1: C# Core (Days 1–5)
 
 **Day 1**
-- Core: ★ Value vs reference types, boxing/unboxing, nullable types, var vs explicit typing
-- Extra: Pattern matching (switch expressions, `is`/`as`), tuples & deconstruction, nullable reference types (C# 8+)
+- Core: ★ Value vs reference types, boxing/unboxing, nullable types, var vs explicit typing; 🆕 Boolean types & operators; 🆕 Arrays
+- Extra: Pattern matching (switch expressions, `is`/`as`), tuples & deconstruction, nullable reference types / working with NULL (C# 8+)
 
 **Day 2**
-- Core: ★ IEnumerable vs IQueryable vs ICollection vs IList; Collections (List, Dictionary, HashSet, Queue/Stack)
-- Extra: Structs vs classes vs records deep dive; `Span<T>`/`Memory<T>` basics; immutable collections
+- Core: ★ IEnumerable vs IQueryable vs ICollection vs IList; Collections (List, Dictionary, HashSet, Queue/Stack); 🆕 Lists and Dictionaries deep dive
+- Extra: Structs vs classes vs records; `Span<T>`/`Memory<T>` basics; immutable collections; 🆕 Strings deep dive & string interning; 🆕 StringBuilder deep dive (vs concatenation)
 
 **Day 3**
-- Core: ★ Delegates vs events vs Func/Action/Predicate; ★ exception handling (try/catch/finally, custom exceptions, filters)
-- Extra: Multicast delegates, custom `add`/`remove` event accessors, exception filter `when` clause
+- Core: ★ Delegates vs events vs Func/Action/Predicate (🆕 generic delegate types); ★ exception handling (try/catch/finally, custom exceptions, filters)
+- Extra: Multicast delegates, custom `add`/`remove` event accessors, exception filter `when` clause; 🆕 Expressions & Casting/Type Conversion (boxing, `Convert`, `Parse`)
 
 **Day 4**
-- Core: Generics & constraints; ★ OOP four pillars with code examples
-- Extra: Extension methods, partial classes, static classes vs static members
+- Core: Generics & constraints; ★ OOP four pillars with code examples; 🆕 OOP building blocks — Field & Constant, Methods (by value vs by reference), Constructor, Properties
+- Extra: Extension methods, partial classes, static classes vs static members; 🆕 Operator Overloading
 
 **Day 5**
-- Core: Overloading vs overriding, access modifiers, OOP traps (diamond problem)
-- Extra: Records `with`-expressions, init-only setters
+- Core: Overloading vs overriding, access modifiers, OOP traps (diamond problem); ★ interface vs abstract class; 🆕 Enums
+- Extra: Records `with`-expressions, init-only setters; 🆕 Debugging in C# (breakpoints, watch/immediate windows, conditional breakpoints); 🆕 Tuple type (Tuple vs ValueTuple)
 - **Hands-on:** console order system using interfaces, generics, custom exceptions, then refactor with inheritance/polymorphism (e.g., `PaymentMethod` types)
 
 ## Week 2: SQL (Days 6–10)
@@ -80,11 +79,11 @@ Same 45-day structure, expanded for 5 hrs/day: ~3 hrs on the **Core** topics (fr
 
 **Day 17**
 - Core: ★ Method vs query syntax; core operators (Select, Where, GroupBy, Join, Aggregate, OrderBy)
-- Extra: PLINQ basics and pitfalls
+- Extra: PLINQ basics and pitfalls; 🆕 `IEnumerator`/`IEnumerable`/`IComparable` — implementing a custom iterator/comparer, how `foreach` actually works under the hood
 
 **Day 18**
 - Core: Performance pitfalls; ★ LINQ to Objects vs LINQ to Entities
-- Extra: How `IQueryable` providers translate expressions (conceptual overview — no need to build one)
+- Extra: 🆕 `yield return` / `yield break` deep dive — writing custom iterator methods (ties directly into `IEnumerable`)
 
 **Day 19**
 - Core: Closures in LINQ, tricky interview questions
@@ -137,7 +136,7 @@ Same 45-day structure, expanded for 5 hrs/day: ~3 hrs on the **Core** topics (fr
 ## Week 7: ASP.NET Core Fundamentals (Days 30–35)
 
 **Day 30**
-- Core: ★ Request pipeline — middleware, app.Use/Run/Map, order
+- Core: ★ Request pipeline — middleware, app.Use/Run/Map, order; 🆕 Top-level statements (`Program.cs` minimal hosting model)
 - Extra: Hosted services / `IHostedService` / `BackgroundService`
 
 **Day 31**
@@ -171,7 +170,7 @@ Same 45-day structure, expanded for 5 hrs/day: ~3 hrs on the **Core** topics (fr
 - Extra: RFC 7807 Problem Details in depth, content negotiation
 
 **Day 38**
-- Core: ★ Swagger/OpenAPI setup; global exception handling
+- Core: ★ Swagger/OpenAPI setup; 🆕 XML documentation comments (`///`) and how they power Swagger docs; global exception handling
 - Extra: API Gateway pattern (Ocelot/YARP overview — conceptual)
 
 **Day 39**
@@ -190,25 +189,30 @@ Same 45-day structure, expanded for 5 hrs/day: ~3 hrs on the **Core** topics (fr
 ## Week 9: Async, Testing & System Design (Days 42–45)
 
 **Day 42**
-- Core: ★ Async/await deep dive; threading basics (Thread vs Task, ThreadPool, lock, race conditions)
+- Core: ★ Async/await deep dive; threading basics (Thread vs Task, ThreadPool, lock, race conditions); 🆕 Threading deep dive (synchronization primitives, thread safety)
 - Extra: `IAsyncEnumerable`/async streams, `ValueTask` vs `Task`
 
 **Day 43**
 - Core: Testing — xUnit, Moq, WebApplicationFactory; resilience (Polly, health checks)
-- Extra: BenchmarkDotNet basics, test coverage tooling
+- Extra: BenchmarkDotNet basics, test coverage tooling; 🆕 Serialization in .NET (JSON/XML/binary — System.Text.Json vs Newtonsoft); 🆕 Stream I/O (FileStream, MemoryStream, reading/writing files)
 
 **Day 44**
 - Core: ★ Microservices concepts, containerization/Docker, CI/CD concepts; ★ system design practice
-- Extra: gRPC basics, pub/sub vs point-to-point messaging, Kubernetes fundamentals (pods, services, deployments — conceptual)
+- Extra: gRPC basics, pub/sub vs point-to-point messaging, Kubernetes fundamentals (conceptual); 🆕 Assemblies & reflection basics; 🆕 Attributes (built-in and custom); 🆕 NuGet packages & packaging a class library
 
 **Day 45**
 - Core: **Hands-on + final review:** add async + cancellation to one endpoint, write unit + integration tests, Dockerize it, sketch one system design on paper
-- Extra: full mock interview — talk through your project/resume, practice 2–3 behavioral questions (STAR method), do a rapid-fire self-quiz on all ★ items across all 9 weeks
+- Extra: full mock interview — talk through your project/resume, practice 2–3 behavioral questions (STAR method), rapid-fire self-quiz on all ★ items across all 9 weeks
 
 ---
 
+## What changed from v1 (and why)
+The video course covers several C#-language and .NET-ecosystem topics that don't come up in every interview but are worth having ready, especially for "explain X" or take-home-project questions:
+- **Enums, Operator Overloading, Tuples, Top-level statements, Strings/StringBuilder** — folded into Week 1 since they're core language basics best learned alongside the rest of C# fundamentals.
+- **`IEnumerator`/`IEnumerable`/`IComparable`, `yield`** — moved into Week 4 (LINQ) since they're the mechanics *underneath* LINQ — understanding `yield` makes deferred execution click much faster.
+- **Assemblies, Attributes, NuGet packaging, XML docs, Serialization, Stream I/O, Threading depth** — placed in Weeks 8–9 alongside related topics (XML docs → Swagger, threading → async, serialization/streams → testing week) since these are more "ecosystem/tooling" knowledge than core interview drivers — good to know, lower priority if time is tight.
+
 ## How to use this
-- **Split your 5 hrs:** ~3 hrs Core (must-know, interview-frequent) + ~2 hrs Extra (depth that separates mid-level from senior-level answers). If a day gets tight, Core always wins.
-- **Extra topics are additive, not a detour** — they mostly extend the same day's Core topic (e.g., CTEs after joins, refresh tokens after JWT), so they reinforce rather than fragment your learning.
-- **If you fall behind:** drop Extra topics first, never Core or hands-on days.
+- **Split your 5 hrs:** ~3 hrs Core + ~2 hrs Extra. If a day gets tight, Core always wins, then ★ items within Extra.
+- **If you fall behind:** drop 🆕 ecosystem topics (Assemblies, Attributes, NuGet, XML docs) first — they're least likely to be the deciding factor in an interview. Never drop Core or hands-on days.
 - **Weekly gut-check:** end each week by explaining that week's ★ topics out loud without notes.
